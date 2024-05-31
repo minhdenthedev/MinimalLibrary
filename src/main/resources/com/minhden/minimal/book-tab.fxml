@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.minhden.minimal.BookTabController">
+   <center>
+      <SplitPane dividerPositions="0.25" prefHeight="805.0" prefWidth="1228.0" BorderPane.alignment="CENTER">
+         <items>
+            <TreeView fx:id="tableOfContentDisplay" maxWidth="450.0" prefHeight="803.0" prefWidth="300.0" />
+            <BorderPane prefHeight="803.0" prefWidth="573.0">
+               <top>
+                  <HBox alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="920.0" spacing="5.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="577.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label fx:id="bookTitle" text="Label">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Region prefHeight="59.0" prefWidth="51.0" HBox.hgrow="NEVER" />
+                        <TextField prefHeight="24.0" prefWidth="195.0" promptText="Find in book..." />
+                        <Button minWidth="60.0" mnemonicParsing="false" text="Find" />
+                     </children>
+                     <padding>
+                        <Insets left="15.0" right="20.0" />
+                     </padding>
+                  </HBox>
+               </top>
+               <center>
+                  <SplitPane dividerPositions="0.65" prefHeight="725.0" prefWidth="920.0" BorderPane.alignment="CENTER">
+                     <items>
+                        <WebView fx:id="epubDisplay" prefHeight="200.0" prefWidth="200.0" />
+                        <WebView maxWidth="450.0" prefHeight="742.0" prefWidth="200.0" />
+                     </items>
+                  </SplitPane>
+               </center>
+            </BorderPane>
+         </items>
+      </SplitPane>
+   </center>
+</BorderPane>
