@@ -1,1 +1,1 @@
-# Minimal Library - Simple and Elegant Epub Reader written by Java
+# Minimal Library - Simple and Elegant Epub Reader written in Java
